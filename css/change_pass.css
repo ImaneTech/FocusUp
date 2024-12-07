@@ -1,0 +1,133 @@
+/*--------------------------------------------------- Style de la page ----------------------------------------*/   
+*{
+    font-family: "Indie Flower", cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    zoom:0.8;
+}
+html,body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  background: linear-gradient(135deg, rgba(191,174,238,1) 0%, rgba(148,187,233,1) 100%);
+
+}
+/*----------------- Container principal --------------------- */    
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----------------- Contenu de la page --------------------- */    
+.content {
+    height: 450px;
+    width: 800px;
+    padding: 50px;
+    background: rgba(0, 0, 139, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.content h2 {
+    color: rgb(46, 16, 240);
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    white-space: nowrap; /*empêcher le retour à la ligne*/  
+}
+
+/*----------------- Contenu du formulaire --------------------- */    
+.new_password{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.new_password label{
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1.6em;
+}
+
+.input {
+    width: 100%;
+    padding: 8px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    outline: none;
+    margin-top: 5px;
+    font-size: 1.5em;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.3em;
+}
+
+/*--------------------------------------------------- Bouton ---------------------------------------------------------- */
+
+.submit {
+    width: 100%;
+    padding: 12px;
+    background: rgb(0, 0, 255);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 2em;
+    margin-top: 20px;
+}
+/*----------------- Bouton lorsque l'utilisateur survole --------------------- */   
+.submit:hover {
+    background: transparent;
+    border: 1px solid rgb(0, 0, 255);
+    border-radius: 15px;
+    border-width: 5px;
+}
+
+/*----------------- Message d'erreur --------------------- */   
+
+.errorMsg{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+    background-color: #ffe6e6;
+    color: #dc3545;
+    border: 4px solid #dc3545;
+    border-radius: 15px; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+    word-wrap: break-word; /* Permettre le retour à la ligne des longs mots */
+}
+
+.successMsg{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+    background-color: #e6ffe6;
+    color: #28a745;
+    border: 1px solid #28a745;
+    border-radius: 15px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    word-wrap: break-word; /* Permettre le retour à la ligne des longs mots */
+    height: auto; /* Hauteur automatique selon le contenu */
+}

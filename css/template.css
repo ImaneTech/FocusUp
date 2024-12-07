@@ -1,0 +1,207 @@
+/*------------------------------- style de la page ------------------------------------------- */   
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Indie Flower", cursive;
+}
+html{
+    zoom:0.8;
+}
+body {
+    background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 76%);
+    padding: 20px;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+}
+/*------------------------------- sidebar -------------------------------------------   */
+.side-nav {
+    flex-direction: column;
+    height: 100%;
+    width: 110px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    transition: width 0.5s;
+    z-index: 1000;
+}
+.nav-links {
+    flex-grow: 1; /* Cela permet aux nav-links de prendre l'espace disponible dans le conteneur flex */
+}
+/*liste des liens*/
+ul {
+    list-style: none; /* Supprime le style de liste par défaut */
+    padding: 0 15px; /* Ajoute du padding horizontal */
+    margin-top: 20px; /* Ajoute une marge en haut */
+}
+ul li {
+    margin: 30px 0; /* Ajoute une marge verticale */
+    display: flex; /* Active le layout flex pour les éléments de la liste */
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+    cursor: pointer; /* Change le curseur en pointeur au survol */
+    text-decoration: none;
+    font-weight: bold;
+}
+ul li img, .user-name {
+    width: 30px; /* Définit une largeur fixe pour les images et les noms d'utilisateur */
+    margin-right: 0px; /* Pas de marge à droite */
+}
+ul li p {
+    white-space: nowrap; /* Empêche le texte de se plier */
+    display: none; /* Cache le paragraphe par défaut */
+    color: #000000; /* Définit la couleur pour le paragraphe */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*---------------------------------------------------- sidebar au survol -------------------------------------------------------------------- */
+.side-nav:hover {
+    width: 250px; /* Élargit la side-nav au survol */
+    display: block; /* Affiche le div utilisateur au survol */
+}
+.side-nav:hover ul li p {
+    display: block; /* Affiche le paragraphe au survol */
+}
+
+.side-nav:hover ul li img {
+    margin-right: 10px; /* Ajoute une marge à droite pour les images au survol */
+}
+
+.side-nav:hover ul li {
+    justify-content: flex-start; /* Aligne les éléments de la liste au début au survol */
+}
+
+/*------------------------------------------------- logo de website ------------------------------------------------------------------------*/
+.logo {
+    padding: 15px; /* Ajoute du padding autour du logo */
+    display: flex; /* Active le layout flex pour le logo */
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+.logo-icon {
+    width: 30px; /* Définit une largeur fixe pour l'icône du logo */
+    height: auto; /* Maintient le rapport d'aspect */
+}
+
+.logo-img {
+    width: 120px; /* Définit une largeur fixe pour l'image du logo */
+    height: auto; /* Maintient le rapport d'aspect */
+    display: none; /* Cache l'image du logo par défaut */
+    margin-left: 10px; /* Ajoute une marge à gauche */
+}
+
+/*------------------------------- logo au survol ------------------------------------------------------------------------*/ 
+.side-nav:hover .logo {
+    justify-content: flex-start;
+}
+
+.side-nav:hover .logo-img {
+    display: block;
+}
+
+/*------------------------------- Affichage de nom et email de l'utilisateur au survol ----------------------------------*/     
+.side-nav:hover .user-email{
+    display: block;
+}
+.side-nav:hover .user-name{
+    justify-content: flex-start;
+}
+
+/*------------------------------- paragraphe de bas de sidebar -------------------------------------------*/
+.nav-bottom {
+    margin-top: auto; /* Cela pousse le nav-bottom vers le bas de la side-nav */
+    padding-bottom: 20px; /* Ajoute du padding en bas */
+}
+/*-------------------- Affichage de nom et email de l'utilisateur --------------------------*/ 
+.user-info {
+    display: flex; /* Active le layout flex pour user-info */
+    flex-direction: column; /* Empile les enfants verticalement */
+    align-items: flex-start; /* Aligne les enfants au début du conteneur flex */
+    padding: 10px; /* Ajoute du padding autour de user-info */
+    margin: 10px 0; /* Ajoute une marge verticale */
+    border-radius: 8px; /* Arrondit les coins */
+    background-color: rgba(255, 255, 255, 0.1); /* Définit un fond semi-transparent */
+}
+.user-email {
+    font-size: 14px; /* Définit la taille de police pour l'email */
+    color: grey; /* Définit la couleur pour l'email */
+    white-space: nowrap; /* Empêche le texte de se plier */
+    overflow: hidden; /* Cache le texte débordant */
+    max-width: 100%; /* Limite la largeur à 100% du conteneur */
+    margin: 0; /* Pas de marge */
+    display: none;
+}
+.user-name {
+    font-size: 18px; /* Définit la taille de police pour le nom d'utilisateur */
+    font-weight: 600; /* Définit le poids de la police pour le nom d'utilisateur */
+    color: #4a90e2; /* Définit la couleur pour le nom d'utilisateur */
+    display: inline; /* Affiche le nom d'utilisateur en ligne */
+}
+
+
+
+/*------------------------------- quote ------------------------------------------------------------------------*/
+.quote-container {
+    margin-top: 8px;
+    margin-left: 300px;
+    margin-right: 50px;
+    margin-bottom: 5px;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    display: flex;      /* Ajout de flexbox */
+    align-items: center; /* Centre verticalement */
+    justify-content: center;
+    width: 1000px;      /* Largeur fixe */
+    min-height: 190px; /* Hauteur minimale */
+    max-height: 200px; /* Hauteur maximale */
+}
+.quote-box {
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+
+}
+.quote-title {
+    margin-bottom: 5px;  /* Espace sous le titre */
+    font-size: 2rem;
+    color: #333;
+}
+.quote-text {
+    white-space: normal;  /* Permet le retour à la ligne */
+    overflow: visible;
+    max-width: 100%;
+    margin: 0;
+    padding: 5px;
+    color: #000000;
+    line-height: 1.4;    /* Améliore la lisibilité */
+}
+.quote-author {
+    display: block;  /* Met l'auteur sur une nouvelle ligne */
+    margin-top: 10px;  /* Espace au-dessus de l'auteur */
+    font-style: italic;
+    color: #555;
+}
+.quote {
+    white-space: nowrap;        /* Empêche le retour à la ligne */
+    overflow: visible;
+    max-width: 100%;
+    margin: 0;
+}
+blockquote {
+    white-space: normal;
+    overflow: visible;
+    margin: 0;
+    padding: 5px;
+}
+

@@ -1,0 +1,126 @@
+/*------------------------------- Style de la page ------------------------------------------- */   
+*{   
+    margin: 0;
+    padding: 0;
+    font-family: "Indie Flower", cursive;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(191,174,238);
+    background: linear-gradient(90deg, rgba(191,174,238,1) 0%, rgba(148,187,233,1) 100%);
+}
+html{
+    zoom:0.8;
+}
+/*------------------------------- Container principal ------------------------------------------- */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+/*------------------------------- Contenu de la page ------------------------------------------- */ 
+.content {
+    width: 600px;
+    max-width: 90%;
+    padding: 30px;
+    background: rgba(0, 0, 139, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+/*------------------------------- Titre de la page ------------------------------------------- */
+h2 {
+    color: blue;
+    text-align: center;
+    margin-bottom: 26px;
+    font-size: 2.5em;
+    font-weight: bold;
+    }
+/*------------------------------- Contenu du formulaire ------------------------------------------- */
+form {
+    width: 100%;
+}
+.form-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.input-group label {
+    margin-bottom: 8px;
+    font-size: 17px;
+    color:white;
+}
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    color:white;
+    outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+/*------------------------------- Message d'erreur ------------------------------------------- */
+.error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+    display: block;
+}
+/*------------------------------- Bouton d'envoi ------------------------------------------- */ 
+.submit{
+    width: 100%;
+    padding: 12px;
+    background: rgb(0, 0, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+
+}
+/*------------------------------- Bouton d'envoi lorsque l'utilisateur survole ------------------------------------------- */
+.submit:hover {
+    background: transparent;
+    border: 1px solid rgb(0, 0, 255);
+    border-radius: 5px;
+}
+/*------------------------------- Lien de connexion ------------------------------------------- */  
+.link {
+    text-align: center;
+    color: white;
+    text-decoration:underline;
+    margin-top: 20px;
+}
+.link a {
+    color: rgb(0, 8, 255);
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 8, 255);
+}
+/*------------------------------- Lien de connexion lorsque l'utilisateur survole ------------------------------------------- */    
+.link a:hover {
+    text-decoration: underline;
+    color: rgb(149, 0, 255);
+}
+

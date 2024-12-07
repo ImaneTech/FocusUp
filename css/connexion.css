@@ -1,0 +1,141 @@
+/*--------------------------------------------------- Style de la page ----------------------------------------*/   
+*{
+    font-family: "Indie Flower", cursive;
+}
+html{
+    zoom:0.8;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(191,174,238);
+    background: linear-gradient(90deg, rgba(191,174,238,1) 0%, rgba(148,187,233,1) 100%);
+
+    }
+
+/*----------------- Container principal --------------------- */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/*----------------- Contenu de la page --------------------- */ 
+.content {
+    width: 500px;
+    height: 600px;
+    padding: 30px;
+    background: rgba(0, 0, 139, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.content h2 {
+    color: rgb(46, 16, 240);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.3em;
+}
+
+/*----------------- Contenu du formulaire --------------------- */ 
+.username, .password {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.username label, .password label {
+    font-size: 1.5em;
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    padding: 8px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    outline: none;
+    margin-top: 5px;
+    font-size: 1.5em;
+}
+/*----------------- placeholder --------------------- */    
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.7em;
+    }
+
+/*----------------- la partie mot de passe oublié et se souvenir de moi    --------------------- */ 
+.more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    color: white;
+    font-size: 1.2em;
+}
+
+.more span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.forgot-password a{
+    color:blue;
+    cursor: pointer;
+    margin: 0;
+    text-decoration:underline;
+}
+/*----------------- lorsque l'utilisateur survole le lien --------------------- */  
+.forgot-password:hover a{
+    text-decoration: underline;
+    color:rgb(111, 5, 210);
+}
+/*----------------- Bouton --------------------- */ 
+.submit {
+    width: 100%;
+    padding: 12px;
+    background: rgb(0, 0, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2.3em;
+    margin-top: 20px;
+}
+/*----------------- lorsque l'utilisateur survole le bouton --------------------- */
+.submit:hover {
+    background: transparent;
+    border: 1px solid rgb(0, 0, 255);
+    border-radius: 5px;
+}
+
+/*----------------- le utulisaeur n'a pas de compte     --------------------- */
+.dnt-acc{
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+/*----------------- inscription  link --------------------- */
+.signup {
+    color: blue;
+    text-decoration: none;
+    text-decoration: underline;
+}
+/*----------------- lorsque l'utilisateur survole le lien --------------------- */
+.signup:hover {
+    text-decoration: underline;
+    color:rgb(111, 5, 210);
+}

@@ -1,0 +1,87 @@
+/*------------------------------- style de la page  ------------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* pour que les éléments ne dépassent pas de la boîte */    
+    font-family: "Indie Flower", cursive;
+}
+html{
+    zoom:0.8;
+}
+
+body {
+    background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 76%);
+    padding: 20px;
+}
+
+/*------------------------------- message de bienvenue ------------------------------------------- */
+.welcome-container {
+    margin-left: 300px;
+    margin-bottom: 4px;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    width: 1000px;   
+}
+
+.welcome-message{
+    font-size: 1.8rem;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-name-welcome{
+    color: #001eff;
+    font-weight: 600;
+    display: inline;
+}
+
+/*------------------------------- video de accueil  -------------------------------------------    */
+.tutorial-container {
+    width: calc(100% - 400px);
+    margin-left: 300px;
+    margin-right: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 10px;
+    align-self: center;
+    height:300px;
+    max-width: 800px;
+    text-align: center;
+}
+.tutorial-container h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.video-wrapper {
+    width: 100%;
+}
+
+.video-wrapper h2 {
+    margin-bottom: 20px;
+}
+.video-placeholder {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.video-placeholder iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

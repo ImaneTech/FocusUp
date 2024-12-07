@@ -1,0 +1,118 @@
+/* ---------------------------------------- Reset et styles de base ---------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    zoom:0.8;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/*----------------- Container principal --------------------- */
+.container {
+    max-width: 1200px;
+    margin-left: 300px;
+    margin-right: 230px;
+    padding: 0 20px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+/*----------------- Grille des posts --------------------- */
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 2 colonnes  repeat(nombre de colonne, taille de la colonne)   1fr = 1 fraction de la grille */  
+    gap: 2rem;    /* espace entre les colonnes */
+}
+
+/*----------------- Style des posts --------------------- */
+.blog-post {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);  /* deplacer le post lorsque l'utilisateur survole */  
+}
+
+/*----------------- Titre de l'article --------------------- */
+.post-title {
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    text-align: center;
+    background: #f8f9fa;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+    line-height: 1.4;
+}
+
+/*----------------- Contenu de l'article --------------------- */
+.post-content {
+    padding: 1rem;
+}
+
+/*----------------- Image --------------------- */
+.post-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.post-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.blog-post:hover .post-image img {
+    transform: scale(1.05);  /* agrandir l'image lorsque l'utilisateur survole le post */   
+}
+
+/*----------------- Section détails --------------------- */
+.post-details {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.post-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.view-article {
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.view-article:hover {
+    background: #2980b9;
+}

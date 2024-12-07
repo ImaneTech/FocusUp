@@ -1,0 +1,179 @@
+/* ------------------------------- Reset et styles de base -------------------------------------------  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* pour que les bordures ne soient pas prises en compte dans la taille de l'element */  
+}
+html{
+    zoom:0.8;
+}
+
+body {
+   /* min-height: 100vh;
+    padding-bottom: 70px;   */
+    font-family: "Indie Flower", cursive;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+/*------------------------------- conteneur de la page -------------------------------------------*/    
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    width: calc(100% - 300px);
+    margin-left: 350px;
+    margin-right: 170px;
+
+}
+/*------------------------------- Styles du formulaire -------------------------------------------*/
+.form-container {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+/*------------------------------- style de l'input  nom de la tache -------------------------------------------*/
+.form-control {
+    width: 50%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color:rgba(255, 255, 255, 0.2);
+    border: 3px solid #007bff;
+    border-radius: 18px;
+    margin-right: 0.5rem;
+    height: 40px;
+}
+/*------------------------------- style du bouton ajouter  tache -------------------------------------------*/
+.addtask {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+/*------------------------------- style du bouton ajouter  tache au survol -------------------------------------------*/    
+.addtask:hover {
+   background:transparent;
+   border: 1px solid #007bff;
+   color: #004ea2;
+}
+
+/*------------------------------- Styles des tables -------------------------------------------*/
+.table {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+    background:rgba(255, 255, 255, 0.2);  /* Couleur de fond table-danger */
+    border-radius: 15px;
+    margin-bottom: 0;
+}
+.table th,.table td{
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-top: 1px solid #007bff;
+    text-align: center;
+    border-radius: 15px;
+}
+/*------------------------------- style du titre de la page -------------------------------------------*/   
+.tasktitle {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/*------------------------------- style des boutons -------------------------------------------*/
+.boutton {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    margin: 0 2px;
+    transition: all 0.15s ease-in-out;
+    min-width: 80px;
+    white-space: nowrap;
+}
+/*------------------------------- style du bouton terminer -------------------------------------------*/    
+.terminer{
+    color: #28a745;
+    border: 2px solid #28a745;
+    background-color: transparent;
+}
+
+.terminer:hover {
+    color: black;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+/*------------------------------- style du bouton supprimer -------------------------------------------*/       
+.supprimer{
+    color: #dc3545;
+    border: 2px solid #dc3545;
+    background-color: transparent;
+}
+.supprimer:hover {
+    color: black;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+/*------------------------------- style du bouton modifier -------------------------------------------*/
+.modifier {
+    color: #007bff;
+    border: 2px solid #007bff;
+    background-color: transparent;
+}
+.modifier:hover {
+    color: black;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/*------------------------------- style pour le conteneur des taches -------------------------------------------*/  
+.tasklist {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+/*------------------------------- style pour le conteneur tasklist pour utiliser Grid -------------------------------------------*/
+.tasklist {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divise en deux colonnes égales */
+    gap: 30px;
+    margin-top: 30px;
+}
+/*------------------------------- style pour les conteneurs de tables -------------------------------------------*/
+.tasklist .part1, .tasklist .part2 {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 20px;
+}
+/*------------------------------- style du conteneur des boutons -------------------------------------------*/
+.actions-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;  /* Espace entre les boutons */
+    flex-wrap: nowrap;  /* Empêche le retour à la ligne */
+}

@@ -1,0 +1,185 @@
+/*--------------------------------------------------- Style de la page ----------------------------------------*/   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* pour que les bordures ne soient pas prises en compte dans la taille de l'element */  
+}
+html{
+ 
+    zoom:0.8;   
+}
+body {
+    background: linear-gradient(135deg, #87CEEB, #9370DB); 
+    font-family: "Indie Flower", cursive;
+    min-width:height 100vh;
+}
+
+/*----------------------- Container principal --------------------------- */    
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: calc(100% - 400px);
+    margin-left: 350px; 
+    margin-bottom: 150px;
+    margin-top: 15px;
+    max-width: 900px; 
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+   
+}
+
+/*------------------------- Contenu de la page ------------------------------- */     
+.content{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: start;
+}
+
+/*--------------------------------- Titre de la page ------------------------------------------- */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    grid-column: 1;
+}
+
+/*------------------------------- Contenu du formulaire ------------------------------------------- */
+form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: none;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    min-width: 80px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    
+}
+
+.form-group input,
+.form-group textarea {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    color: #495057;
+    transition: box-shadow 0.3s ease;
+}
+
+
+/*------------------------------- Contenu du formulaire ------------------------------------------- */
+.contact-form {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+}
+
+/*-------------------------------- Style de la photo ---------------------- --------------------- */
+.photo {
+    grid-column: 1;
+    grid-row: 1;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 5px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+/*-------------------------------- Style de l'image ------------------------------------------- */
+.photo img {
+    width: 150px;
+    height: auto;
+    border-radius: 15px;
+    transform: scale(3); /* agrandir l'image */
+    object-fit: contain;
+    align-items: center;
+}
+
+/*------------------------------- Contenu du bouton ----------------------  --------------------- */  
+.button-group {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+button{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    width: 100%;
+}
+
+/*-------------------------------- Style du boutons ------------------------------------------- */
+.submit-button {
+    background-color: #1900ff;
+    color: white;
+}
+.reset-button {
+   background-color: transparent;
+    border: 2px solid #dc3545;
+    color: #dc3545;
+}
+/*----------------- Style du boutons lorsque l'utilisateur survole --------------------- */
+.submit-button:hover {
+    background-color: transparent;
+    border: 2px solid #1600c2;
+    color:#1600c2;
+    border-radius: 10px;
+    border-width: 2px;
+}
+.reset-button:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+/* pour les messages d'erreur ou de succes  */
+.errorMsg, .successMsg{
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+}
+/*------------------------------- Messages d'erreur  ------------------------------------------- */ 
+.errorMsg{
+    background-color: #ffe6e6;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 15px;
+}
+/*------------------------------- Messages de succes  ------------------------------------------- */    
+.successMsg{
+    background-color: #e6ffe6;
+    color: #28a745;
+    border: 1px solid #28a745;
+    border-radius: 15px;
+}

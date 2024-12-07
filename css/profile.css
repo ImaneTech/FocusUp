@@ -1,0 +1,137 @@
+/*------------------------------- Style de la page ------------------------------------------- */
+html{
+    zoom:0.8;
+}
+/*------------------------------- Page de profil   ------------------------------------------- */
+.profile-container {
+    width: calc(100% - 600px);
+    margin-left: 310px;
+    margin-top: 5px;
+    margin-right: 230x;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+  
+}
+.profile-grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 20px;
+}
+/*------------------------------- partie gauche  de informations ------------------------------------------- */
+.profile-info {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+/*------------------------------- Titre de la partie gauche  ------------------------------------------- */
+.profile-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+     color: #333;
+}
+
+.infos p {
+    margin: 15px 0;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.infos strong {
+    display: inline-block;
+    white-space: nowrap;
+    color:#2868a0;
+    width: 150px;
+    margin-right: 40px;
+}
+/*------------------------------- partie droite  de photo ------------------------------------------- */    
+.profile-photo {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*------------------------------- Conteneur de la photo ------------------------------------------- */
+.photo-container {
+    margin-bottom: 20px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+/*------------------------------- Photo de profil ------------------------------------------- */
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+/*------------------------------- modification de la photo  ------------------------------------------- */    
+.upload-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#profile_photo {
+    box-sizing: border-box; /* pour que la taille de l'input ne dépasse pas la taille de son conteneur */
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+
+}
+/*------------------------------- Bouton d'envoi ------------------------------------------- */ 
+.upload{
+    background:#5ca7e8;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+/*------------------------------- Bouton d'envoi lorsque l'utilisateur survole ------------------------------------------- */   
+.upload:hover {
+    background: transparent;
+    border: 1px solid #2868a0;
+    border-radius: 5px;
+}
+
+/* pour les messages d'erreur ou de succes  */
+.msg-error, .msg-success{
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+}
+/*------------------------------- Messages d'erreur  ------------------------------------------- */ 
+.msg-error{
+    background-color: #ffe6e6;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 15px;
+}
+/*------------------------------- Messages de succes  ------------------------------------------- */    
+.msg-success{
+    background-color: #e6ffe6;
+    color: #28a745;
+    border: 1px solid #28a745;
+    border-radius: 15px;
+}
